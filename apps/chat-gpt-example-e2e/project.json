@@ -1,0 +1,30 @@
+{
+  "name": "chat-gpt-example-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/chat-gpt-example-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/chat-gpt-example-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "chat-gpt-example:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "chat-gpt-example:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "chat-gpt-example:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["chat-gpt-example"]
+}

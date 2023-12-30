@@ -1,0 +1,19 @@
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="container">
+    <div class="wrapper">
+      <textarea name="prompt"
+              placeholder="Message ChatGPT…"
+              appResizeArea
+              (keydown)="onEnterSubmit($event)"
+              formControlName="prompt"
+              ></textarea>
+    </div>
+      <app-button
+      [type]="type"
+      [icon]="icon"
+      [tooltipTest]="tooltipTest"
+      [isDisabled]="isDisabled">
+    </app-button>
+  </div>
+</form>

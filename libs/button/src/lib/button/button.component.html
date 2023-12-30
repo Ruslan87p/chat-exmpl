@@ -1,0 +1,8 @@
+<span class="custom-btn">
+  <button [type]="type"
+          [disabled]="isDisabled"
+          [ngClass]="{'enabled': !isDisabled}">
+    <img class="img" [src]="icon" alt="Arrow-up-icon">
+    <span class="tooltiptext">{{tooltipTest}}</span>
+  </button>
+</span>

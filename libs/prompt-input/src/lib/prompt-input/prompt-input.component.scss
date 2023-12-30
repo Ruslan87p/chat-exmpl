@@ -1,0 +1,41 @@
+
+form {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  .container {
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    max-width: 800px;
+    min-width: 300px;
+    position: relative;
+    .wrapper {
+    width: 100%;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+      textarea {
+        height: 40px;
+        max-height: 150px;
+        padding: 15px 60px 15px 15px;
+        width: 100%;
+        display: flex;
+        overflow-y: scroll;
+        outline: none;
+        background-color: #fff;
+        border-color: #8e8ea0;
+        border-radius: 15px;
+        border-width: 1px;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        vertical-align:baseline;
+        resize:none;
+      }
+    }
+    app-button {
+      position: absolute;
+      right: 20px;
+    }
+  }
+}

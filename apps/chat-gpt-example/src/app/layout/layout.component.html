@@ -1,0 +1,14 @@
+<div class="container">
+  @if (!toggle.toggle()) {
+    <app-greeting-window></app-greeting-window>
+  } @else {
+    <app-loader *ngIf="loadingSvs.isLoading()"></app-loader>
+    <app-chat-window *ngIf="!this.errorSvc.error()" [question]="question"></app-chat-window>
+  }
+    <ng-template [ngIf]="this.errorSvc.error()">
+      <app-errors [error]="this.errorSvc.error()"></app-errors>
+    </ng-template>
+
+  <app-prompt-input (question)="geQuestion($event)"></app-prompt-input>
+</div>
+

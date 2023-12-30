@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@app/button": ["libs/button/src/index.ts"],
+      "@app/chat-window": ["libs/chat-window/src/index.ts"],
+      "@app/errors": ["libs/errors/src/index.ts"],
+      "@app/greeting-window": ["libs/greeting-window/src/index.ts"],
+      "@app/loader": ["libs/loader/src/index.ts"],
+      "@app/prompt-input": ["libs/prompt-input/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
